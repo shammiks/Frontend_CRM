@@ -1,0 +1,142 @@
+/* Background container */
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #93c5fd, #d8b4fe, #f9a8d4);
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Centered login box */
+.login-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slide-in-down 0.8s ease-out;
+  transition: transform 0.5s;
+}
+
+.login-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative blob */
+.decorative-blob {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(to top right, #f472b6, #c084fc);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(40px);
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Heading */
+.login-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+/* Description */
+.login-description {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  animation: fade-in 1s ease-in-out 0.2s;
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pop-in 0.5s ease-out;
+}
+
+.login-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:active {
+  transform: scale(0.95);
+}
+
+/* Google Icon */
+.google-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  animation: fade-in 1s ease-in-out 0.5s;
+}
+
+/* Animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
